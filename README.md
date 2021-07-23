@@ -59,3 +59,86 @@ Solutions to HackerRank Cpp problems.
         </tr>
     </tbody>
 </table>
+
+<h1>Strings</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Solution</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td><a href="https://www.hackerrank.com/challenges/attribute-parser/problem">Attribute Parser</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/strings/attribute_parser.cpp">Cpp</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><a href="https://www.hackerrank.com/challenges/c-tutorial-stringstream/problem">StringStream</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/strings/string_stream.cpp">Cpp</a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><a href="https://www.hackerrank.com/challenges/c-tutorial-strings/problem">Strings</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/strings/strings.cpp">Cpp</a></td>
+        </tr>
+    </tbody>
+</table>
+
+<h1>Classes</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Solution</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td><a href="https://www.hackerrank.com/challenges/c-tutorial-struct/problem">Structs</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/classes/struct.cpp">Cpp</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><a href="https://www.hackerrank.com/challenges/c-tutorial-class/problem">Class</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/classes/classes.cpp">Cpp</a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><a href="https://www.hackerrank.com/challenges/classes-objects/problem">Classes and Objects</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/classes/classes_and_objects.cpp">Cpp</a></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><a href="https://www.hackerrank.com/challenges/box-it/problem">Box It!</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/classes/box_it.cpp">Cpp</a></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td><a href="https://www.hackerrank.com/challenges/inherited-code/problem">Inherited Code</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/classes/inherited_code.cpp">Cpp</a></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td><a href="https://www.hackerrank.com/challenges/exceptional-server/problem">Exceptional Server</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/classes/exceptional_server.cpp">Cpp</a></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td><a href="https://www.hackerrank.com/challenges/virtual-functions/problem">Virtual Functions</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/classes/virtual_functions.cpp">Cpp</a></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td><a href="https://www.hackerrank.com/challenges/abstract-classes-polymorphism/problem">Abstract Classes - Polymorphism</td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/classes/polymorphism.cpp">Cpp</a></td>
+        </tr>
+    </tbody>
+</table>
