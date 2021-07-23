@@ -3,7 +3,9 @@
 #include <cstdio>
 #include <iostream>
 #include <vector>
+
 using namespace std;
+
 class Matrix {
 public:
   vector<vector<int>> a;
@@ -18,6 +20,7 @@ public:
     return result;
   }
 };
+
 int main() {
   int cases, k;
   cin >> cases;
