@@ -143,7 +143,7 @@ Solutions to HackerRank Cpp problems.
     </tbody>
 </table>
 
-<h1>Classes</h1>
+<h1>STLClasses</h1>
 
 <table>
     <thead>
