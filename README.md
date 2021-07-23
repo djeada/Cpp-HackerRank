@@ -142,3 +142,52 @@ Solutions to HackerRank Cpp problems.
         </tr>
     </tbody>
 </table>
+
+<h1>Classes</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Solution</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td><a href="https://www.hackerrank.com/challenges/vector-sort/problem">Vector Sort</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/stl/vector_sort.cpp">Cpp</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><a href="https://www.hackerrank.com/challenges/vector-erase/problem">Vector Erease</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/stl/vector_erase.cpp">Cpp</a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><a href="https://www.hackerrank.com/challenges/vector-erase/problem">Lower Bound-STL</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/stl/lower_bound.cpp">Cpp</a></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><a href="https://www.hackerrank.com/challenges/cpp-sets/problem">Sets STL</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/stl/sets.cpp">Cpp</a></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td><a href="https://www.hackerrank.com/challenges/cpp-maps/problem">Maps STL</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/stl/maps.cpp">Cpp</a></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td><a href="https://www.hackerrank.com/challenges/prettyprint/problem">Print Pretty</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/stl/print_pretty.cpp">Cpp</a></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td><a href="https://www.hackerrank.com/challenges/deque-stl/problem">Deque STL</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/stl/deque.cpp">Cpp</a></td>
+        </tr>
+    </tbody>
+</table>
