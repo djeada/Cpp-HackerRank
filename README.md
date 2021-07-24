@@ -143,7 +143,7 @@ Solutions to HackerRank Cpp problems.
     </tbody>
 </table>
 
-<h1>STLClasses</h1>
+<h1>STL</h1>
 
 <table>
     <thead>
@@ -188,6 +188,133 @@ Solutions to HackerRank Cpp problems.
             <td>7</td>
             <td><a href="https://www.hackerrank.com/challenges/deque-stl/problem">Deque STL</a></td>
             <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/stl/deque.cpp">Cpp</a></td>
+        </tr>
+    </tbody>
+</table>
+
+<h1>Inheritance</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Solution</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td><a href="https://www.hackerrank.com/challenges/inheritance-introduction/problem">Inheritance Introduction</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/inheritance/inheritance_introduction.cpp">Cpp</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><a href="https://www.hackerrank.com/challenges/rectangle-area/problem">Rectangle Area</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/inheritance/rectangle_area.cpp">Cpp</a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><a href="https://www.hackerrank.com/challenges/multi-level-inheritance-cpp/problem">Multi Level Inheritance</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/inheritance/multi_level_inheritance.cpp">Cpp</a></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><a href="https://www.hackerrank.com/challenges/accessing-inherited-functions/problem">Accessing Inherited Functions</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/inheritance/accessing_inherited_functions.cpp">Cpp</a></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td><a href="https://www.hackerrank.com/challenges/magic-spells/problem">Magic Spells</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/inheritance/magic_spells.cpp">Cpp</a></td>
+        </tr>
+    </tbody>
+</table>
+
+<h1>Strings</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Solution</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td><a href="https://www.hackerrank.com/challenges/hotel-prices/problem">Hotel Prices</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/inheritance/hotel_prices.cpp">Cpp</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><a href="https://www.hackerrank.com/challenges/cpp-exception-handling/problem">Cpp exception handling</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/debugging/exception_handling.cpp">Cpp</a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><a href="https://www.hackerrank.com/challenges/overloading-ostream-operator/problem">Overloading Ostream Operator</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/debugging/overloading_ostream_operator.cpp">Cpp</a></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><a href="https://www.hackerrank.com/challenges/messages-order/problem">Messages Order</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/debugging/messages_order.cpp">Cpp</a></td>
+        </tr>
+    </tbody>
+</table>
+
+<h1>Other Concepts</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Solution</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td><a href="https://www.hackerrank.com/challenges/c-class-templates/problem">C++ Class Templates</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/other_concepts/class_template.cpp">Cpp</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><a href="https://www.hackerrank.com/challenges/preprocessor-solution/problem">Preprocessor Solution</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/other_concepts/preprocessor_solution.cpp">Cpp</a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><a href="https://www.hackerrank.com/challenges/operator-overloading/problem">Operator Overloading</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/other_concepts/operator_overloading.cpp">Cpp</a></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><a href="https://www.hackerrank.com/challenges/overload-operators/problem">Overload Operators</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/other_concepts/overload_operators.cpp">Cpp</a></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td><a href="https://www.hackerrank.com/challenges/attending-workshops/problem">Attending Workshops</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/other_concepts/attending_workshops.cpp">Cpp</a></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td><a href="https://www.hackerrank.com/challenges/cpp-class-template-specialization/problem">C++ Class Template Specialization</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/other_concepts/class_template_specialization.cpp">Cpp</a></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td><a href="https://www.hackerrank.com/challenges/cpp-variadics/problem">C++ Variadics</a></td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/other_concepts/variadics.cpp">Cpp</a></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td><a href="https://www.hackerrank.com/challenges/bitset-1/problem">Bit Array</td>
+            <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/other_concepts/bit_array.cpp">Cpp</a></td>
         </tr>
     </tbody>
 </table>
