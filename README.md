@@ -1,6 +1,8 @@
 # Cpp-HackerRank
 Solutions to HackerRank Cpp problems.
 
+![Capture](https://user-images.githubusercontent.com/37275728/186216013-543fd2e8-95dc-485b-995a-55f1e24fd536.PNG)
+
 <h1>Introduction</h1>
 
 <table>
