@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -14,10 +15,9 @@ private:
   string last_name_;
 };
 
-ostream &operator<<(ostream &os, Person &p) {
-  cout << "first_name=" << p.get_first_name()
-       << ",last_name=" << p.get_last_name();
-  return os;
+ostream &operator<<(ostream &os, const Person &p) {
+  return os << "first_name=" << p.get_first_name()
+            << ",last_name=" << p.get_last_name();
 }
 
 int main() {

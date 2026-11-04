@@ -1,4 +1,6 @@
+#include <algorithm>
 #include <iostream>
+#include <memory>
 #include <string>
 #include <vector>
 using namespace std;
@@ -76,18 +78,36 @@ void counterspell(Spell *spell) {
     return;
   }
 
-  auto a = spell->revealScrollName();
-  auto b = SpellJournal::read();
-  auto m = a.size(), n = b.size();
-
-  vector<vector<int>> s(m + 1, vector<int>(n + 1, 0));
-
-  for (int i = 0; i < m; i++) {
-    for (int j = 0; j < n; j++)
-      s[i + 1][j + 1] =
-          max(s[i][j] + (a[i] == b[j]), max(s[i + 1][j], s[i][j + 1]));
+  auto scroll = spell->revealScrollName();
+  auto journal = SpellJournal::read();
+  if (scroll.size() < journal.size()) {
+    scroll.swap(journal);
   }
-  cout << s[m][n] << '\n';
+
+  // Approach 1 (active) computes LCS with O(min(m, n)) extra space.
+  vector<int> lcs(journal.size() + 1, 0);
+  for (char letter : scroll) {
+    int diagonal = 0;
+    for (string::size_type j = 0; j < journal.size(); ++j) {
+      const int above = lcs[j + 1];
+      lcs[j + 1] = letter == journal[j] ? diagonal + 1 : max(above, lcs[j]);
+      diagonal = above;
+    }
+  }
+  cout << lcs.back() << '\n';
+
+  // Approach 2 stores the full O(m * n) table. Replace the rolling row above.
+  /*
+  vector<vector<int>> lcs(scroll.size() + 1, vector<int>(journal.size() + 1, 0));
+  for (string::size_type i = 0; i < scroll.size(); ++i) {
+    for (string::size_type j = 0; j < journal.size(); ++j) {
+      lcs[i + 1][j + 1] = scroll[i] == journal[j]
+                              ? lcs[i][j] + 1
+                              : max(lcs[i][j + 1], lcs[i + 1][j]);
+    }
+  }
+  cout << lcs.back().back() << '\n';
+  */
 }
 
 class Wizard {
@@ -119,8 +139,8 @@ int main() {
   cin >> T;
   Wizard Arawn;
   while (T--) {
-    Spell *spell = Arawn.cast();
-    counterspell(spell);
+    unique_ptr<Spell> spell(Arawn.cast());
+    counterspell(spell.get());
   }
   return 0;
 }

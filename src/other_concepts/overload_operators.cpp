@@ -1,6 +1,7 @@
 // Operator Overloading
 
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -9,7 +10,7 @@ public:
   int a, b;
   void input(string s) {
     int v1 = 0;
-    int i = 0;
+    string::size_type i = 0;
     while (s[i] != '+') {
       v1 = v1 * 10 + s[i] - '0';
       i++;

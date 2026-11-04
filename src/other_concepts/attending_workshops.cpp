@@ -1,11 +1,14 @@
-#include <bits/stdc++.h>
+#include <algorithm>
+#include <iostream>
+#include <limits>
+#include <vector>
 
 using namespace std;
 
 struct Workshop {
   int start_time;
   int duration;
-  int end_time;
+  long long end_time;
 };
 
 struct Available_Workshops {
@@ -22,7 +25,8 @@ Available_Workshops *initialize(int start_time[], int duration[], int n) {
   for (int i = 0; i < n; i++) {
     AW->Workshops[i].start_time = start_time[i];
     AW->Workshops[i].duration = duration[i];
-    AW->Workshops[i].end_time = start_time[i] + duration[i] - 1;
+    AW->Workshops[i].end_time =
+        static_cast<long long>(start_time[i]) + duration[i];
   }
 
   return AW;
@@ -33,13 +37,12 @@ bool CompareWorkshops(Workshop w1, Workshop w2) {
 }
 
 int CalculateMaxWorkshops(Available_Workshops *ptr) {
-  vector<Workshop> W;
-  for (int i = 0; i < ptr->n; i++)
-    W.push_back(ptr->Workshops[i]);
-  sort(W.begin(), W.end(), CompareWorkshops);
-  int result = 0, end_time = 0;
-  for (auto w : W) {
-    if (w.start_time > end_time) {
+  vector<Workshop> workshops(ptr->Workshops, ptr->Workshops + ptr->n);
+  sort(workshops.begin(), workshops.end(), CompareWorkshops);
+  int result = 0;
+  long long end_time = numeric_limits<long long>::lowest();
+  for (const auto &w : workshops) {
+    if (w.start_time >= end_time) {
       end_time = w.end_time;
       result++;
     }
@@ -47,12 +50,11 @@ int CalculateMaxWorkshops(Available_Workshops *ptr) {
   return result;
 }
 
-int main(int argc, char *argv[]) {
+int main() {
   int n; // number of workshops
   cin >> n;
-  // create arrays of unknown size n
-  int *start_time = new int[n];
-  int *duration = new int[n];
+  vector<int> start_time(n);
+  vector<int> duration(n);
 
   for (int i = 0; i < n; i++) {
     cin >> start_time[i];
@@ -61,8 +63,9 @@ int main(int argc, char *argv[]) {
     cin >> duration[i];
   }
 
-  Available_Workshops *ptr;
-  ptr = initialize(start_time, duration, n);
-  cout << CalculateMaxWorkshops(ptr) << endl;
+  auto *ptr = initialize(start_time.data(), duration.data(), n);
+  cout << CalculateMaxWorkshops(ptr) << '\n';
+  delete[] ptr->Workshops;
+  delete ptr;
   return 0;
 }

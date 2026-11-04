@@ -1,58 +1,79 @@
-#include <algorithm>
-#include <cmath>
-#include <cstdio>
+#include <array>
 #include <iostream>
+#include <memory>
+#include <numeric>
+#include <string>
 #include <vector>
 using namespace std;
 
-int professor_id = 0;
-int student_id = 0;
 class Person {
-public:
+protected:
   string name;
-  int age, score, id;
+  int age;
+
+public:
+  virtual ~Person() = default;
   virtual void putdata() = 0;
   virtual void getdata() = 0;
 };
+
 class Professor : public Person {
-  void putdata() {
-    cout << name << ' ' << age << ' ' << score << ' ' << ++professor_id << endl;
+  static int next_id;
+  const int cur_id;
+  int publications;
+
+public:
+  Professor() : cur_id(++next_id) {}
+
+  void putdata() override {
+    cout << name << ' ' << age << ' ' << publications << ' ' << cur_id << '\n';
   }
-  void getdata() { cin >> name >> age >> score; }
+
+  void getdata() override { cin >> name >> age >> publications; }
 };
+
+int Professor::next_id = 0;
+
 class Student : public Person {
-  void putdata() {
-    cout << name << ' ' << age << ' ' << score << ' ' << ++student_id << endl;
+  static int next_id;
+  const int cur_id;
+  array<int, 6> marks;
+
+public:
+  Student() : cur_id(++next_id) {}
+
+  void putdata() override {
+    const int total = accumulate(marks.begin(), marks.end(), 0);
+    cout << name << ' ' << age << ' ' << total << ' ' << cur_id << '\n';
   }
-  void getdata() {
+
+  void getdata() override {
     cin >> name >> age;
-    score = 0;
-    for (int i = 0, x; i < 6; i++)
-      cin >> x, score += x;
+    for (int &mark : marks) {
+      cin >> mark;
+    }
   }
 };
+
+int Student::next_id = 0;
 
 int main() {
+  int n;
+  cin >> n;
+  vector<unique_ptr<Person>> people(n);
 
-  int n, val;
-  cin >> n; // The number of objects that is going to be created.
-  Person *per[n];
-
-  for (int i = 0; i < n; i++) {
-
-    cin >> val;
-    if (val == 1) {
-      // If val is 1 current object is of type Professor
-      per[i] = new Professor;
-
-    } else
-      per[i] = new Student; // Else the current object is of type Student
-
-    per[i]->getdata(); // Get the data from the user.
+  for (auto &person : people) {
+    int type;
+    cin >> type;
+    if (type == 1) {
+      person.reset(new Professor);
+    } else {
+      person.reset(new Student);
+    }
+    person->getdata();
   }
 
-  for (int i = 0; i < n; i++)
-    per[i]->putdata(); // Print the required output for each object.
-
-  return 0;
+  for (const auto &person : people) {
+    person->putdata();
+  }
 }

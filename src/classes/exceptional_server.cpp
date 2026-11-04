@@ -1,4 +1,3 @@
-#include <cmath>
 #include <exception>
 #include <iostream>
 #include <stdexcept>
@@ -17,7 +16,7 @@ public:
       throw std::invalid_argument("A is negative");
     }
     vector<int> v(A, 0);
-    int real = -1, cmplx = sqrt(-1);
+    int real = -1;
     if (B == 0)
       throw 0;
     real = (A / B) * real;

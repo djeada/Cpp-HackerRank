@@ -1,29 +1,31 @@
-#include <algorithm>
-#include <cmath>
-#include <cstdio>
 #include <iostream>
-#include <set>
-#include <vector>
+#include <map>
+#include <string>
+#include <unordered_map>
 using namespace std;
 
 int main() {
-  /* Enter your code here. Read input from STDIN. Print output to STDOUT */
-  int n, type, value;
-  cin >> n;
-  set<int> s;
-  for (int i = 0; i < n; i++) {
-    cin >> type >> value;
+  int queries;
+  cin >> queries;
+
+  // Approach 1 (active) uses an ordered map for O(log n) operations.
+  map<string, int> marks;
+  // Approach 2 uses hashing for average O(1) operations. Replace the map above.
+  // unordered_map<string, int> marks;
+
+  for (int i = 0; i < queries; ++i) {
+    int type;
+    string name;
+    cin >> type >> name;
     if (type == 1) {
-      s.insert(value);
+      int score;
+      cin >> score;
+      marks[name] += score;
     } else if (type == 2) {
-      s.erase(value);
+      marks.erase(name);
     } else if (type == 3) {
-      if (s.find(value) != s.end()) {
-        cout << "Yes\n";
-      } else {
-        cout << "No\n";
-      }
+      const auto found = marks.find(name);
+      cout << (found == marks.end() ? 0 : found->second) << '\n';
     }
   }
-  return 0;
 }

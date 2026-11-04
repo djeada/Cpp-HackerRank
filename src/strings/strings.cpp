@@ -28,7 +28,7 @@ int main() {
   }
   cout << " ";
 
-  for (int i = n1; i < str3.size(); i++) {
+  for (string::size_type i = n1; i < str3.size(); i++) {
     cout << str3[i];
   }
   cout << endl;

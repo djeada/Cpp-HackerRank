@@ -1,6 +1,5 @@
 #include <exception>
 #include <iostream>
-#include <sstream>
 #include <string>
 using namespace std;
 
@@ -8,12 +7,12 @@ using namespace std;
 
 class BadLengthException : public std::exception {
 private:
-  int length;
+  string message;
 
 public:
-  BadLengthException(int n) { length = n; }
+  explicit BadLengthException(int length) : message(to_string(length)) {}
 
-  virtual string what() { return to_string(length); }
+  const char *what() const noexcept override { return message.c_str(); }
 };
 
 bool checkUsername(string username) {
@@ -43,7 +42,7 @@ int main() {
       } else {
         cout << "Invalid" << '\n';
       }
-    } catch (BadLengthException e) {
+    } catch (const BadLengthException &e) {
       cout << "Too short: " << e.what() << '\n';
     }
   }

@@ -1,5 +1,5 @@
 # Cpp-HackerRank
-Solutions to HackerRank Cpp problems.
+Solutions to HackerRank C++ and [C challenges](#c-challenges).
 
 ![Capture](https://user-images.githubusercontent.com/37275728/186216013-543fd2e8-95dc-485b-995a-55f1e24fd536.PNG)
 
@@ -17,7 +17,7 @@ Solutions to HackerRank Cpp problems.
         <tr>
             <td>1</td>
             <td><a href="https://www.hackerrank.com/challenges/cpp-hello-world/problem">Say "Hello, World!" With C++</a></td>
-            <td><a href="">Cpp</a></td>
+            <td><a href="src/introduction/hello_world.cpp">Cpp</a></td>
         </tr>
         <tr>
             <td>2</td>
@@ -52,7 +52,7 @@ Solutions to HackerRank Cpp problems.
         <tr>
             <td>8</td>
             <td><a href="https://www.hackerrank.com/challenges/arrays-introduction/problem">Arrays Introduction</a></td>
-            <td><a href="">Cpp</a></td>
+            <td><a href="src/introduction/arrays_introduction.cpp">Cpp</a></td>
         </tr>
         <tr>
             <td>9</td>
@@ -168,7 +168,7 @@ Solutions to HackerRank Cpp problems.
         </tr>
         <tr>
             <td>3</td>
-            <td><a href="https://www.hackerrank.com/challenges/vector-erase/problem">Lower Bound-STL</a></td>
+            <td><a href="https://www.hackerrank.com/challenges/cpp-lower-bound/problem">Lower Bound-STL</a></td>
             <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/stl/lower_bound.cpp">Cpp</a></td>
         </tr>
         <tr>
@@ -320,3 +320,62 @@ Solutions to HackerRank Cpp problems.
         </tr>
     </tbody>
 </table>
+
+## C Challenges
+
+Each C solution is a standalone program. Compile any one with a C11 compiler.
+Where a second approach is shown, it is commented out beside the active implementation.
+
+```sh
+cc -std=c11 -Wall -Wextra -pedantic src/c/introduction/hello_world.c -o hello_world
+```
+
+### Introduction
+
+| Challenge | Solution |
+| --- | --- |
+| ["Hello World!" in C](https://www.hackerrank.com/challenges/hello-world-c/problem) | [C](src/c/introduction/hello_world.c) |
+| [Playing With Characters](https://www.hackerrank.com/challenges/playing-with-characters/problem) | [C](src/c/introduction/playing_with_characters.c) |
+| [Sum and Difference of Two Numbers](https://www.hackerrank.com/challenges/sum-numbers-c/problem) | [C](src/c/introduction/sum_and_difference.c) |
+| [Functions in C](https://www.hackerrank.com/challenges/functions-in-c/problem) | [C](src/c/introduction/functions.c) |
+| [Pointers in C](https://www.hackerrank.com/challenges/pointer-in-c/problem) | [C](src/c/introduction/pointers.c) |
+
+### Conditionals and Loops
+
+| Challenge | Solution |
+| --- | --- |
+| [Conditional Statements in C](https://www.hackerrank.com/challenges/conditional-statements-in-c/problem) | [C](src/c/conditionals_and_loops/conditional_statements.c) |
+| [For Loop in C](https://www.hackerrank.com/challenges/for-loop-in-c/problem) | [C](src/c/conditionals_and_loops/for_loop.c) |
+| [Sum of Digits of a Five Digit Number](https://www.hackerrank.com/challenges/sum-of-digits-of-a-five-digit-number/problem) | [C](src/c/conditionals_and_loops/sum_of_digits.c) |
+| [Bitwise Operators](https://www.hackerrank.com/challenges/bitwise-operators-in-c/problem) | [C](src/c/conditionals_and_loops/bitwise_operators.c) |
+| [Printing Pattern Using Loops](https://www.hackerrank.com/challenges/printing-pattern-2/problem) | [C](src/c/conditionals_and_loops/printing_pattern.c) |
+
+### Arrays and Strings
+
+| Challenge | Solution |
+| --- | --- |
+| [1D Arrays in C](https://www.hackerrank.com/challenges/1d-arrays-in-c/problem) | [C](src/c/arrays_and_strings/one_dimensional_arrays.c) |
+| [Array Reversal](https://www.hackerrank.com/challenges/reverse-array-c/problem) | [C](src/c/arrays_and_strings/array_reversal.c) |
+| [Printing Tokens](https://www.hackerrank.com/challenges/printing-tokens-/problem) | [C](src/c/arrays_and_strings/printing_tokens.c) |
+| [Digit Frequency](https://www.hackerrank.com/challenges/frequency-of-digits-1/problem) | [C](src/c/arrays_and_strings/digit_frequency.c) |
+| [Dynamic Array in C](https://www.hackerrank.com/challenges/dynamic-array-in-c/problem) | [C](src/c/arrays_and_strings/dynamic_array.c) |
+
+### Functions
+
+| Challenge | Solution |
+| --- | --- |
+| [Calculate the Nth Term](https://www.hackerrank.com/challenges/recursion-in-c/problem) | [C](src/c/functions/calculate_nth_term.c) |
+| [Students Marks Sum](https://www.hackerrank.com/challenges/students-marks-sum/problem) | [C](src/c/functions/students_marks_sum.c) |
+| [Sorting Array of Strings](https://www.hackerrank.com/challenges/sorting-array-of-strings/problem) | [C](src/c/functions/sorting_array_of_strings.c) |
+| [Permutations of Strings](https://www.hackerrank.com/challenges/permutations-of-strings/problem) | [C](src/c/functions/permutations_of_strings.c) |
+| [Variadic Functions in C](https://www.hackerrank.com/challenges/variadic-functions-in-c/problem) | [C](src/c/functions/variadic_functions.c) |
+| [Querying the Document](https://www.hackerrank.com/challenges/querying-the-document/problem) | [C](src/c/functions/querying_the_document.c) |
+
+### Structs and Enums
+
+| Challenge | Solution |
+| --- | --- |
+| [Boxes through a Tunnel](https://www.hackerrank.com/challenges/too-high-boxes/problem) | [C](src/c/structs_and_enums/boxes_through_a_tunnel.c) |
+| [Small Triangles, Large Triangles](https://www.hackerrank.com/challenges/small-triangles-large-triangles/problem) | [C](src/c/structs_and_enums/small_triangles_large_triangles.c) |
+| [Post Transition](https://www.hackerrank.com/challenges/post-transition/problem) | [C](src/c/structs_and_enums/post_transition.c) |
+| [Structuring the Document](https://www.hackerrank.com/challenges/structuring-the-document/problem) | [C](src/c/structs_and_enums/structuring_the_document.c) |
