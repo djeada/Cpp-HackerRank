@@ -15,10 +15,11 @@ vector<int> input_vector(int n) {
   return numbers;
 }
 
-void print_vector(vector<int> arr) {
-  for (int i = 0; i < arr.size(); i++) {
-    cout << arr[i] << " ";
+void print_vector(const vector<int> &arr) {
+  for (int value : arr) {
+    cout << value << " ";
   }
+  cout << '\n';
 }
 
 int main() {

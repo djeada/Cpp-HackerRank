@@ -1,14 +1,18 @@
-#define INF (unsigned)!((int)0)
-#define FUNCTION(name, operator)                                               \
-  inline void name(int &current, int candidate) {                              \
-    !(current operator candidate) ? current = candidate : false;               \
+#include <climits>
+#include <iostream>
+#include <vector>
+
+#define INF INT_MAX
+#define FUNCTION(name, op)                                                     \
+  inline void name(int &current, int candidate) {                               \
+    if (candidate op current) {                                                \
+      current = candidate;                                                     \
+    }                                                                          \
   }
 #define io(v) cin >> v
 #define toStr(str) #str
-#define foreach(v, i) for (int i = 0; i < v.size(); ++i)
+#define foreach(v, i) for (decltype((v).size()) i = 0; i < (v).size(); ++i)
 
-#include <iostream>
-#include <vector>
 using namespace std;
 
 #if !defined toStr || !defined io || !defined FUNCTION || !defined INF
@@ -24,12 +28,12 @@ int main() {
   vector<int> v(n);
   foreach (v, i) { io(v)[i]; }
   int mn = INF;
-  int mx = -INF;
+  int mx = INT_MIN;
   foreach (v, i) {
     minimum(mn, v[i]);
     maximum(mx, v[i]);
   }
-  int ans = mx - mn;
-  cout << toStr(Result =) << ' ' << ans;
+  const long long ans = static_cast<long long>(mx) - mn;
+  cout << toStr(Result =) << ' ' << ans << '\n';
   return 0;
 }

@@ -17,7 +17,7 @@ Solutions to HackerRank Cpp problems.
         <tr>
             <td>1</td>
             <td><a href="https://www.hackerrank.com/challenges/cpp-hello-world/problem">Say "Hello, World!" With C++</a></td>
-            <td><a href="">Cpp</a></td>
+            <td><a href="src/introduction/hello_world.cpp">Cpp</a></td>
         </tr>
         <tr>
             <td>2</td>
@@ -52,7 +52,7 @@ Solutions to HackerRank Cpp problems.
         <tr>
             <td>8</td>
             <td><a href="https://www.hackerrank.com/challenges/arrays-introduction/problem">Arrays Introduction</a></td>
-            <td><a href="">Cpp</a></td>
+            <td><a href="src/introduction/arrays_introduction.cpp">Cpp</a></td>
         </tr>
         <tr>
             <td>9</td>
@@ -168,7 +168,7 @@ Solutions to HackerRank Cpp problems.
         </tr>
         <tr>
             <td>3</td>
-            <td><a href="https://www.hackerrank.com/challenges/vector-erase/problem">Lower Bound-STL</a></td>
+            <td><a href="https://www.hackerrank.com/challenges/cpp-lower-bound/problem">Lower Bound-STL</a></td>
             <td><a href="https://github.com/djeada/Cpp-HackerRank/blob/master/src/stl/lower_bound.cpp">Cpp</a></td>
         </tr>
         <tr>

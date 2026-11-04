@@ -12,7 +12,9 @@ int main() {
   int a, b;
   int *pa = &a, *pb = &b;
 
-  scanf("%d %d", &a, &b);
+  if (scanf("%d %d", &a, &b) != 2) {
+    return 0;
+  }
   update(pa, pb);
   printf("%d\n%d", a, b);
 

@@ -3,25 +3,16 @@
 using namespace std;
 
 int main() {
-  int T;
-  cin >> T;
-  cout << setiosflags(ios::uppercase);
-  cout << setw(0xf) << internal;
-  while (T--) {
-    double A;
-    cin >> A;
-    double B;
-    cin >> B;
-    double C;
-    cin >> C;
+  int cases;
+  cin >> cases;
+  while (cases--) {
+    double a, b, c;
+    cin >> a >> b >> c;
 
-    /* Enter your code here */
-    cout << left << hex << showbase << nouppercase << (long)A << "\n";
+    cout << "0x" << hex << nouppercase << static_cast<long long>(a) << '\n';
     cout << right << setw(15) << setfill('_') << showpos << fixed
-         << setprecision(2) << B << "\n";
-    cout << setw(0) << uppercase << resetiosflags(ios::showpos)
-         << resetiosflags(ios::fixed) << setiosflags(ios::scientific)
-         << setprecision(9) << C << endl;
+         << setprecision(2) << b << '\n';
+    cout << uppercase << noshowpos << scientific << setprecision(9)
+         << c << '\n';
   }
-  return 0;
 }

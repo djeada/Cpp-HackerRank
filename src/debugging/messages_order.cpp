@@ -1,5 +1,7 @@
 #include <algorithm>
 #include <iostream>
+#include <random>
+#include <string>
 #include <vector>
 
 using namespace std;
@@ -13,7 +15,7 @@ public:
   Message() {}
   Message(const string text) : text(text) { id = ++order; }
   const string &get_text() { return text; }
-  bool operator<(Message &other) { return id < other.id; }
+  bool operator<(const Message &other) const { return id < other.id; }
 };
 
 int Message::order = 0;
@@ -48,7 +50,8 @@ public:
   static void send_messages(vector<Message> messages, Recipient &recipient) {
     // simulates the unpredictable network, where sent messages might arrive in
     // unspecified order
-    random_shuffle(messages.begin(), messages.end());
+    mt19937 engine(random_device{}());
+    shuffle(messages.begin(), messages.end(), engine);
     for (auto msg : messages) {
       recipient.receive(msg);
     }

@@ -1,34 +1,43 @@
 #include <algorithm>
-#include <cmath>
-#include <cstdio>
 #include <iostream>
 #include <vector>
 using namespace std;
 
-vector<int> input_vector(int n) {
-  vector<int> numbers;
-  int x;
-  for (int i = 0; i < n; i++) {
-    cin >> x;
-    numbers.push_back(x);
+vector<int>::const_iterator first_at_least(const vector<int> &numbers, int value) {
+  // Approach 1 (active) uses the standard library binary search.
+  return lower_bound(numbers.begin(), numbers.end(), value);
+
+  // Approach 2 implements the same search over a half-open range.
+  /*
+  auto first = numbers.begin();
+  auto last = numbers.end();
+  while (first != last) {
+    auto middle = first + (last - first) / 2;
+    if (*middle < value) {
+      first = middle + 1;
+    } else {
+      last = middle;
+    }
   }
-  return numbers;
+  return first;
+  */
 }
 
 int main() {
-  int n, q, s;
+  int n;
   cin >> n;
-  vector<int> numbers = input_vector(n);
-  cin >> q;
-  for (int i = 0; i < q; i++) {
-    cin >> s;
-    int index =
-        (lower_bound(numbers.begin(), numbers.end(), s) - numbers.begin());
-    if (s == numbers[index]) {
-      cout << "Yes " << index + 1 << "\n";
-    } else {
-      cout << "No " << index + 1 << "\n";
-    }
+  vector<int> numbers(n);
+  for (int &number : numbers) {
+    cin >> number;
   }
-  return 0;
+
+  int queries;
+  cin >> queries;
+  for (int i = 0; i < queries; ++i) {
+    int value;
+    cin >> value;
+    const auto found = first_at_least(numbers, value);
+    const bool exact = found != numbers.end() && *found == value;
+    cout << (exact ? "Yes " : "No ") << (found - numbers.begin() + 1) << '\n';
+  }
 }

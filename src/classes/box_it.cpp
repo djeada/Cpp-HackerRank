@@ -37,11 +37,8 @@ public:
     breadth = b;
     height = h;
   }
-  Box(const Box &B) {
-    length = B.length;
-    breadth = B.breadth;
-    height = B.height;
-  }
+  Box(const Box &) = default;
+  Box &operator=(const Box &) = default;
   int getLength() { return length; }
   int getBreadth() { return breadth; }
   int getHeight() { return height; }

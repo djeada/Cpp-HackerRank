@@ -23,8 +23,9 @@ public:
   int get_standard() { return std; }
   void set_standard(int standard) { std = standard; }
   string to_string() {
-    cout << ag << "," << fn << "," << ln << "," << std;
-    return " ";
+    ostringstream output;
+    output << ag << "," << fn << "," << ln << "," << std;
+    return output.str();
   }
 };
 

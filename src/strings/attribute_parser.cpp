@@ -1,68 +1,45 @@
-#include <algorithm>
-#include <bits/stdc++.h>
-#include <cmath>
-#include <cstdio>
 #include <iostream>
+#include <limits>
+#include <map>
+#include <sstream>
+#include <string>
 #include <vector>
-
 using namespace std;
 
 int main() {
-  /* Enter your code here. Read input from STDIN. Print output to STDOUT */
-  int n, q;
-  cin >> n >> q;
-  string temp;
-  vector<string> hrml;
-  vector<string> quer;
-  cin.ignore();
+  int lines, queries;
+  cin >> lines >> queries;
+  cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
-  for (int i = 0; i < n; i++) {
-    getline(cin, temp);
-    hrml.push_back(temp);
-  }
-  for (int i = 0; i < q; i++) {
-    getline(cin, temp);
-    quer.push_back(temp);
-  }
+  map<string, string> attributes;
+  vector<string> paths;
+  for (int i = 0; i < lines; ++i) {
+    string line;
+    getline(cin, line);
+    if (line.compare(0, 2, "</") == 0) {
+      paths.pop_back();
+      continue;
+    }
 
-  map<string, string> m;
-  vector<string> tag;
+    istringstream tag(line.substr(1, line.rfind('>') - 1));
+    string name;
+    tag >> name;
+    paths.push_back(paths.empty() ? name : paths.back() + "." + name);
 
-  for (int i = 0; i < n; i++) {
-    temp = hrml[i];
-    temp.erase(remove(temp.begin(), temp.end(), '\"'), temp.end());
-    temp.erase(remove(temp.begin(), temp.end(), '>'), temp.end());
-
-    if (temp.substr(0, 2) == "</") {
-      tag.pop_back();
-    } else {
-      stringstream ss;
-      ss.str("");
-      ss << temp;
-      string t1, p1, v1;
-      char ch;
-      ss >> ch >> t1 >> p1 >> ch >> v1;
-      string temp1 = "";
-      if (tag.size() > 0) {
-        temp1 = *tag.rbegin();
-        temp1 = temp1 + "." + t1;
-      } else
-        temp1 = t1;
-      tag.push_back(temp1);
-      m[*tag.rbegin() + "~" + p1] = v1;
-      while (ss) {
-        ss >> p1 >> ch >> v1;
-        m[*tag.rbegin() + "~" + p1] = v1;
+    while (tag >> ws && getline(tag, name, '=')) {
+      name.erase(name.find_last_not_of(" \t") + 1);
+      tag.ignore(numeric_limits<streamsize>::max(), '"');
+      string value;
+      if (getline(tag, value, '"')) {
+        attributes[paths.back() + "~" + name] = value;
       }
     }
   }
 
-  for (int i = 0; i < q; i++) {
-    if (m.find(quer[i]) == m.end())
-      cout << "Not Found!\n";
-    else
-      cout << m[quer[i]] << endl;
+  for (int i = 0; i < queries; ++i) {
+    string query;
+    cin >> query;
+    const auto found = attributes.find(query);
+    cout << (found == attributes.end() ? "Not Found!" : found->second) << '\n';
   }
-
-  return 0;
 }
